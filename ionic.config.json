@@ -1,0 +1,7 @@
+{
+  "name": "caregiver",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
