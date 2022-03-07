@@ -14,6 +14,6 @@ export class LoginPage implements OnInit {
   }
 
   loginAction() {
-    this.router.navigate(['addpatientinfo']);
+    this.router.navigate(['home/addnewpatient']);
   }
 }

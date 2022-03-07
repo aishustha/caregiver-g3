@@ -1,30 +1,29 @@
-<ion-header>
-  <ion-toolbar color="mango">
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding='true'>
-    <div class="center">
-      <img src="assets/images/logo.png" class="smallLogo"/>
-      <h1>Sign In</h1>
+<ion-content class="bg-color-content">
+  <div class="inner-content">
+    <div class="relative-content">
+      <img src="assets/images/welcome-caregiver.jpeg" class="bg-img"/>
+      <div class="color-overlay"></div>
     </div>
-  <form>
-    <ion-list>
-      <ion-item>
-        <ion-label position="stacked">Username</ion-label>
-        <ion-input autocomplete="off" type="text" name="username" [(ngModel)]="postData.username"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked">Password</ion-label>
-        <ion-input autocomplete="off" type="password" name="password" [(ngModel)]="postData.password"></ion-input>
-      </ion-item>
-
-      <ion-item lines='none'>
-        <a routerLink='/signup'>Create Account</a>
-      </ion-item>
-    </ion-list>
-    <ion-button expand="block" share="round" color="success" (click)="loginAction()">Login</ion-button>
-  </form>
+    <div class="card-overlay">
+      <h1>Welcome Caregiver</h1>
+      <form>
+        <ion-list>
+          <ion-item class="ion-no-padding">
+            <ion-label position="stacked">EMAIL</ion-label>
+            <ion-input autocomplete="off" type="email" name="email"></ion-input>
+          </ion-item>
+    
+          <ion-item class="ion-no-padding">
+            <ion-label position="stacked">PASSWORD</ion-label>
+            <ion-input autocomplete="off" type="password" name="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button expand="block" share="round" (click)="loginAction()">SIGN IN</ion-button>
+        
+      </form>
+      <div class="link-content">
+        <a routerLink='/signup'>Don't have an account? Create Account</a>
+      </div>
+    </div>
+  </div>
 </ion-content>
