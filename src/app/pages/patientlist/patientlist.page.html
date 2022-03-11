@@ -6,77 +6,11 @@
       <ion-searchbar></ion-searchbar>
       
       <div class="list-content">
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
+        <ion-item *ngFor="let patient of patients" lines='none' button (click)="navigateToPatientInfo()">
           <ion-avatar slot="start">
             <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
           </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-item>
-        <ion-item lines='none' button (click)="navigateToPatientInfo()">
-          <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Jessica Smith</ion-label>
+          <ion-label>{{patient.firstName}} {{patient.lastName}}</ion-label>
           <ion-icon name="trash-outline"></ion-icon>
         </ion-item>
       </div>
