@@ -8,24 +8,34 @@
         <ion-list>
           <ion-item class="ion-no-padding">
             <ion-label position="stacked">NAME</ion-label>
-            <ion-input autocomplete="off" name="name" type="text"></ion-input>
+            <ion-input [(ngModel)]="name" autocomplete="off" name="name" type="text"></ion-input>
           </ion-item>
           <ion-item class="ion-no-padding">
             <ion-label position="stacked">ADDRESS</ion-label>
-            <ion-input autocomplete="off" name="address" type="text"></ion-input>
+            <ion-input
+              [(ngModel)]="address"
+              autocomplete="off"
+              name="address"
+              type="text"
+            ></ion-input>
           </ion-item>
 
           <ion-item class="ion-no-padding">
             <ion-label position="stacked">EMAIL</ion-label>
-            <ion-input autocomplete="off" name="email" type="email"></ion-input>
+            <ion-input [(ngModel)]="email" autocomplete="off" name="email" type="email"></ion-input>
           </ion-item>
           <ion-item class="ion-no-padding">
             <ion-label position="stacked">PHONE</ion-label>
-            <ion-input autocomplete="off" name="phone" type="text"></ion-input>
+            <ion-input [(ngModel)]="phone" autocomplete="off" name="phone" type="text"></ion-input>
           </ion-item>
           <ion-item class="ion-no-padding">
             <ion-label position="stacked">EMERGENCY CONTACT</ion-label>
-            <ion-input autocomplete="off" name="emergency contact" type="number"></ion-input>
+            <ion-input
+              [(ngModel)]="emergencyContact"
+              autocomplete="off"
+              name="emergency contact"
+              type="number"
+            ></ion-input>
           </ion-item>
         </ion-list>
         <ion-button expand="block" share="round" (click)="addnewpatient()"
