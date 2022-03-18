@@ -10,119 +10,115 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+@import '~@ionic/angular/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
-
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
 
 //logo and login page
 .bg-color-content {
-    --ion-background-color: #9DC183;
+  --ion-background-color: #9dc183;
 }
 
 .inner-content {
+  position: relative;
+  .relative-content {
     position: relative;
-    .relative-content {
-        position: relative;
-        .bg-img {
-            object-fit: cover;
-            width: 100%;
-            height: 800px;
-        }
+    .bg-img {
+      object-fit: cover;
+      width: 100%;
+      height: 800px;
     }
-    
-    .color-overlay {
-        background: rgba($color: #000000, $alpha: 0.5);
-        position: absolute;
-        z-index: 1;
-        top: 0px;
-        bottom: 0px;
-        right: 0px;
-        left: 0px;
+  }
+
+  .color-overlay {
+    background: rgba($color: #000000, $alpha: 0.5);
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+  }
+
+  .card-overlay {
+    background: #9dc183;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: -90%;
+    border-radius: 50px 50px 0px 0px;
+    z-index: 2;
+    padding: 40px;
+
+    ion-button {
+      --background: #fff;
+      --border-radius: 50px;
+      --padding-top: 30px;
+      --padding-bottom: 30px;
+      --color: #9dc183;
+      --ripple-color: #9dc183;
+      --color-activated: #9dc183;
+      --color-focused: #9dc183;
+      --color-hover: #9dc183;
+      --background-activated: #fff;
+      --background-foucs: #fff;
+      --background-hover: #fff;
+      --box-shadow: none;
     }
 
-    
-    .card-overlay {
-        background: #9DC183;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        bottom: -90%;
-        border-radius: 50px 50px 0px 0px;
-        z-index: 2;
-        padding: 40px;
-        
-        ion-button {
-            --background: #fff;
-            --border-radius: 50px;
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --color: #9DC183;
-            --ripple-color: #9DC183;
-            --color-activated: #9DC183;
-            --color-focused: #9DC183;
-            --color-hover: #9DC183;
-            --background-activated: #fff;
-            --background-foucs: #fff;
-            --background-hover: #fff;
-            --box-shadow: none;
-        }
-
-        //signin - signup
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #fff;
-        }
-    
-        ion-button {
-            margin-top: 60px;
-        }
-    
-        ion-list {
-            background: transparent;
-            background-color: transparent;
-
-        }
-        
-        ion-item {
-            --background: transparent;
-            --background-color: transparent;
-            --border-color: #fff;
-            color: #fff;
-            margin-bottom: 30px;
-        }
-    
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .link-content {
-            margin-top: 60px;
-            text-align: center;
-        }
+    //signin - signup
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #fff;
     }
+
+    ion-button {
+      margin-top: 60px;
+    }
+
+    ion-list {
+      background: transparent;
+      background-color: transparent;
+    }
+
+    ion-item {
+      --background: transparent;
+      --background-color: transparent;
+      --border-color: #fff;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .link-content {
+      margin-top: 60px;
+      text-align: center;
+    }
+  }
 }
 
-
 .back-btn {
-    margin-top: 30px;
-    background: #fff;
-    width: 25px;
-    height: 25px;
-    padding: 4px;
-    border-radius: 50%;
-    color: #9DC183;
+  margin-top: 30px;
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+  border-radius: 50%;
+  color: #9dc183;
 }

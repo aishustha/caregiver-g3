@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-addnewpatient',
@@ -7,13 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./addnewpatient.page.scss'],
 })
 export class AddnewpatientPage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   addnewpatient() {
-    this.router.navigate(['home/patientinfo']);
+    this.router.navigate(['home/patientinfo'])
   }
 }

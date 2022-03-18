@@ -1,25 +1,24 @@
 .card-overlay {
-    position: initial !important;
-    border-radius: 0px !important;
+  position: initial !important;
+  border-radius: 0px !important;
 
-    h1 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
-    p {
-        color: #fff;
-    }
+  p {
+    color: #fff;
+  }
 
-    .list-content {
-        margin-top: 30px;
-    }
+  .list-content {
+    margin-top: 30px;
+  }
 }
 
 ion-searchbar {
-    --background: #fff;
-    --border-radius: 50px;
-    --placeholder-color: #9DC183;
-    --icon-color: #9DC183;
+  --background: #fff;
+  --border-radius: 50px;
+  --placeholder-color: #9dc183;
+  --icon-color: #9dc183;
 }
-

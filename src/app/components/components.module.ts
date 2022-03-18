@@ -1,14 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LogoComponent } from './logo/logo.component';
-
-
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { LogoComponent } from './logo/logo.component'
 
 @NgModule({
   declarations: [LogoComponent],
   exports: [LogoComponent],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

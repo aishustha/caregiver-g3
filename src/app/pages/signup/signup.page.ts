@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-signup',
@@ -7,14 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 
   signupAction() {
-    this.router.navigate(['home/addnewpatient']);
+    this.router.navigate(['home/addnewpatient'])
   }
 }

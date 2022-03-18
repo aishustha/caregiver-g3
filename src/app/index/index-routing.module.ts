@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { Routes, RouterModule } from '@angular/router'
 
-import { IndexPage } from './index.page';
+import { IndexPage } from './index.page'
 
 const routes: Routes = [
   {
@@ -10,19 +10,20 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('../pages/welcome/welcome.module').then( m => m.WelcomePageModule)
+        loadChildren: () =>
+          import('../pages/welcome/welcome.module').then(m => m.WelcomePageModule),
       },
       {
         path: 'login',
-        loadChildren: () => import('../pages/login/login.module').then( m => m.LoginPageModule)
+        loadChildren: () => import('../pages/login/login.module').then(m => m.LoginPageModule),
       },
       {
         path: 'signup',
-        loadChildren: () => import('../pages/signup/signup.module').then( m => m.SignupPageModule)
-      }
-    ]
-  }
-];
+        loadChildren: () => import('../pages/signup/signup.module').then(m => m.SignupPageModule),
+      },
+    ],
+  },
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

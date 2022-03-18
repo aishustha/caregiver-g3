@@ -1,14 +1,21 @@
 <ion-content class="bg-color-content" [scrollEvents]="true">
   <div class="inner-content">
     <div class="card-overlay">
-      <ion-icon name="chevron-back-outline" routerLink='/signup' class="back-btn"></ion-icon>
+      <ion-icon name="chevron-back-outline" routerLink="/signup" class="back-btn"></ion-icon>
       <h1>Patient List</h1>
       <ion-searchbar></ion-searchbar>
-      
+
       <div class="list-content">
-        <ion-item *ngFor="let patient of patients" lines='none' button (click)="navigateToPatientInfo()">
+        <ion-item
+          *ngFor="let patient of patients"
+          lines="none"
+          button
+          (click)="navigateToPatientInfo()"
+        >
           <ion-avatar slot="start">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            <img
+              src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+            />
           </ion-avatar>
           <ion-label>{{patient.firstName}} {{patient.lastName}}</ion-label>
           <ion-icon name="trash-outline"></ion-icon>

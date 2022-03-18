@@ -1,7 +1,7 @@
 <ion-content class="bg-color-content">
   <div class="inner-content">
     <div class="card-overlay">
-      <ion-icon name="chevron-back-outline" routerLink='/signup' class="back-btn"></ion-icon>
+      <ion-icon name="chevron-back-outline" routerLink="/signup" class="back-btn"></ion-icon>
       <h1>Add New Patient</h1>
       <p>Basic Information</p>
       <form>
@@ -28,7 +28,9 @@
             <ion-input autocomplete="off" name="emergency contact" type="number"></ion-input>
           </ion-item>
         </ion-list>
-        <ion-button expand="block" share="round" (click)="addnewpatient()">REGISTER A PATIENT</ion-button>
+        <ion-button expand="block" share="round" (click)="addnewpatient()"
+          >REGISTER A PATIENT</ion-button
+        >
       </form>
     </div>
   </div>
