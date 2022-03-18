@@ -8,22 +8,27 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./patientlist.page.scss'],
 })
 export class PatientlistPage implements OnInit {
-  private patients: any = []
+  patients: any = []
 
   constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get('http://localhost:5000/patients').subscribe(
-      data => {
-        console.log(data)
-        if (data) {
-          this.patients = data
-        }
-      },
-      err => {
-        console.log(err)
-      }
-    )
+    const URL = 'https://patient-mgmt-rest.herokuapp.com/patient'
+    const requestOptions = {
+      method: 'GET',
+    }
+
+    fetch(URL, requestOptions)
+      .then(response => response.json()) // must convert the response to json
+      .then(result => {
+        // handle success
+        this.patients = result
+        console.log('Successful', result)
+      })
+      .catch(err => {
+        // handle error
+        console.error('Something went wrong', err)
+      })
   }
 
   navigateToPatientInfo() {
