@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class PatientlistPage implements OnInit {
   patients: any = []
+  searchTerm: string
 
   constructor(private router: Router, private http: HttpClient) {}
 
