@@ -16,6 +16,7 @@ export class AddnewpatientPage implements OnInit {
   email = ''
   phone = ''
   emergencyContact = ''
+  age = ''
 
   ngOnInit() {}
 
@@ -43,6 +44,8 @@ export class AddnewpatientPage implements OnInit {
       email: this.email,
       phone: this.phone,
       emergencyContact: this.emergencyContact,
+      age: this.age,
+      id: Math.floor(Math.random() * 99999)
     })
 
     var requestOptions = {

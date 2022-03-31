@@ -13,7 +13,9 @@ export class PatientlistPage implements OnInit {
 
   constructor(private router: Router, private http: HttpClient) {}
 
-  ngOnInit() {
+  ngOnInit(){}
+
+  ionViewWillEnter() {
     const URL = 'https://patient-mgmt-rest.herokuapp.com/patient'
     const requestOptions = {
       method: 'GET',
@@ -32,7 +34,23 @@ export class PatientlistPage implements OnInit {
       })
   }
 
-  navigateToPatientInfo() {
-    this.router.navigate(['home/patientinfo'])
+  navigateToPatientInfo(pId) {
+    console.log(pId)
+    this.router.navigate([`home/patientinfo/${pId}`])
   }
+
+  deletePatient(pId){
+    const URL = `https://patient-mgmt-rest.herokuapp.com/patient/${pId}`
+    const requestOptions = {
+      method: 'DELETE',
+    }
+
+    fetch(URL, requestOptions)
+      .then(response => response.json()) // must convert the response to json
+      .then(result => {
+        console.log('Successful', result)
+      })
+      .catch(err => {
+        console.error('Something went wrong', err)
+      })  }
 }

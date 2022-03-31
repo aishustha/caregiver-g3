@@ -16,7 +16,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'patientinfo',
+        path: 'patientinfo/:id',
         loadChildren: () =>
           import('../pages/patientinfo/patientinfo.module').then(m => m.PatientinfoPageModule),
       },

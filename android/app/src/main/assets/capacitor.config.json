@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "caregiver",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

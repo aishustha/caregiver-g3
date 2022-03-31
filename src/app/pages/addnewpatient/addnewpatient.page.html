@@ -1,7 +1,7 @@
 <ion-content class="bg-color-content">
   <div class="inner-content">
     <div class="card-overlay">
-      <ion-icon name="chevron-back-outline" routerLink="/signup" class="back-btn"></ion-icon>
+      <!-- <ion-icon name="chevron-back-outline" routerLink="/signup" class="back-btn"></ion-icon> -->
       <h1>Add New Patient</h1>
       <p>Basic Information</p>
       <form>
@@ -19,7 +19,10 @@
               type="text"
             ></ion-input>
           </ion-item>
-
+          <ion-item class="ion-no-padding">
+            <ion-label position="stacked">Age</ion-label>
+            <ion-input [(ngModel)]="age" autocomplete="off" name="age" type="text"></ion-input>
+          </ion-item>
           <ion-item class="ion-no-padding">
             <ion-label position="stacked">EMAIL</ion-label>
             <ion-input [(ngModel)]="email" autocomplete="off" name="email" type="email"></ion-input>
