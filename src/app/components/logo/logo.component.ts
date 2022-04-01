@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logo',
@@ -12,6 +12,6 @@ export class LogoComponent implements OnInit {
   ngOnInit() {}
 
   navigateToLoginPage() {
-    this.router.navigate(['login'])
+    this.router.navigate(['login']);
   }
 }

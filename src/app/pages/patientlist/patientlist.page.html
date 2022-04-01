@@ -3,18 +3,11 @@
     <div class="card-overlay">
       <!-- <ion-icon name="chevron-back-outline" routerLink="/signup" class="back-btn"></ion-icon> -->
       <h1>Patient List</h1>
-      <ion-searchbar
-        placeholder="Enter Patient Name"
-        [(ngModel)]="searchTerm"
-        animated="true">
+      <ion-searchbar placeholder="Enter Patient Name" [(ngModel)]="searchTerm" animated="true">
       </ion-searchbar>
 
       <div class="list-content">
-        <ion-item
-          *ngFor="let patient of patients | filter:searchTerm"
-          lines="none"
-          button
-        >
+        <ion-item *ngFor="let patient of patients | filter:searchTerm" lines="none" button>
           <ion-avatar slot="start" (click)="navigateToPatientInfo(patient.id)">
             <img
               src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
