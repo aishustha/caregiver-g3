@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-patientlist',
@@ -8,12 +9,23 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./patientlist.page.scss'],
 })
 export class PatientlistPage implements OnInit {
+
   patients: any = [];
   searchTerm: string;
-
+  
   constructor(private router: Router, private http: HttpClient) {}
+  private alertController: AlertController
 
   ngOnInit() {}
+
+  async presentDeletionAlert() {
+    const alert = await this.alertController.create({
+      header: 'User Deleted Successfully',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
 
   ionViewWillEnter() {
     const URL = 'https://patient-mgmt-rest.herokuapp.com/patient';
@@ -27,6 +39,7 @@ export class PatientlistPage implements OnInit {
         // handle success
         this.patients = result;
         console.log('Successful', result);
+        this.presentDeletionAlert();
       })
       .catch(err => {
         // handle error
@@ -53,5 +66,7 @@ export class PatientlistPage implements OnInit {
       .catch(err => {
         console.error('Something went wrong', err);
       });
+
+
   }
 }
